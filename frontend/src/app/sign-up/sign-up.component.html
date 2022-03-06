@@ -1,0 +1,38 @@
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="card-header">
+        <h1>SignUp</h1>
+    </div>
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="../../assets/image/formBanner.jpg" class="img-fluid rounded-start" alt="Image" style="height: 15cm;">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <div *ngif="errmsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{errmsg}}</strong>
+                    <button type="button" class="btn-class" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <form [formGroup]="userForm" (ngSubmit)="userSubmit()">
+                    <div class="mb-3">
+                        <label for="UsernameInput" class="form-label">Username</label>
+                        <input type="username" class="form-control" id="UsernameInput" formControlName="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"  formControlName="email">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="PhoneInput" class="form-label">Phone</label>
+                        <input type="mobile" class="form-control" id="PhoneInput" formControlName="mobile">
+                    </div>
+                    <div class="mb-3">
+                    <label for="InputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="InputPassword1" formControlName="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

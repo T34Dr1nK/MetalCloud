@@ -1,0 +1,13 @@
+<div class="card mb-3">
+    <div class="card-header">
+        <h1>Profile</h1>
+    </div>
+    <div class="card-body">
+        <div *ngIf="twofa==false;else other_content">
+            <p>You doesn't connect 2FA yet</p><button type="submit" class="btn btn-primary">connect</button>
+        </div>
+        <ng-template #other_content>
+
+        </ng-template>
+    </div>
+</div>
